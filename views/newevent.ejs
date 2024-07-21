@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new event</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <form method="post" action="/organiser/events">
+        <label for="event_type">Event_type : </label>
+        <input type="text" name="event_type" id="event_type" placeholder="type of event">
+        <br><br>
+        <label for="event_title">Event_title : </label>
+        <input type="text" name="event_title" id="event_title" placeholder="title of event">
+        <br><br>
+        <label for="event_description">Event_description :</label>
+        <textarea name="event_description" id="event_description">description of event</textarea>
+        <br><br>
+        <label for="location">Location :</label>
+        <textarea name="location" id="location">location of event</textarea>
+        <br><br>
+        <label for="event_after">Event_after(in days) : </label>
+        <input type="text" name="event_after" id="event_after" placeholder="event after">
+        <br><br>
+        <label for="start_time">Start_time :</label>
+        <input type="text" name="start_time" id="start_time" placeholder="start time of event">
+        <br><br>
+        <label for="end_time">End_time :</label>
+        <input type="text" name="end_time" id="end_time" placeholder="end time of event">
+        <br><br>
+        <label for="duration">Duration :</label>
+        <input type="text" name="duration" id="duration" placeholder="duration of event">
+        <br><br>
+        <button>Post Event</button>
+    </form>
+</body>
+</html>

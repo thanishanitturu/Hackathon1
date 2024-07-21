@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Event</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <form  method="post" action="/sports/<%= sport._id %>?_method=PUT">
+       <p>Event_type: <%= sport.event_type %></p>
+        <br><br>
+        <label for="event_title">Event_title : </label>
+        <input name="event_title" id="event_title" value="<%= sport.event_title %>">
+        <br><br>
+        <label for="event_description">Event_description :</label>
+        <textarea name="event_description" id="event_description"><%= sport.event_description %></textarea>
+        <br><br>
+        <label for="location">Location :</label>
+        <textarea name="location" id="location"><%= sport.location %></textarea>
+        <br><br>
+        <label for="event_after">Event_after(in days) : </label>
+        <input name="event_after" id="event_after" value="<%= sport.event_after %>">
+        <br><br>
+        <label for="start_time">Start_time :</label>
+        <input name="start_time" id="start_time" value="<%= sport.start_time %>">
+        <br><br>
+        <label for="end_time">End_time :</label>
+        <input name="end_time" id="end_time" value="<%= sport.end_time %>">
+        <br><br>
+        <label for="duration">Duration :</label>
+        <input name="duration" id="duration" value="<%= sport.duration %>">
+        <br><br>
+        <button class="btn btn-primary">Edit</button>
+    </form>
+</body>
+</html>
