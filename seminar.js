@@ -35,6 +35,11 @@ let seminarSchema=new mongoose.Schema({
     location:{
         type:String,
         required:true
+    },
+    volunteer:
+    {
+        type:Number,
+        required:true
     }
 })
 

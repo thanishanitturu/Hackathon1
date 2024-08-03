@@ -35,6 +35,11 @@ let sportSchema=new mongoose.Schema({
     location:{
         type:String,
         required:true
+    },
+    volunteer:
+    {
+        type:Number,
+        required:true
     }
 })
 

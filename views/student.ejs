@@ -61,8 +61,8 @@
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
         <img src="/css/event.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" style="border-radius: 70%;">
-      </div>
-      <div class="col-lg-6">
+        </div>
+        <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Discover the power of Events</h1>
         <p class="lead">Our college is a vibrant hub of activities that go beyond academics, fostering a holistic development environment for students. The events organized throughout the year cater to diverse interests, promote cultural diversity, and encourage active participation from the student body. Here's a glimpse of some of the key events that make our college life exciting and enriching:</p>
 </div>
@@ -74,36 +74,42 @@
   <h1><b>Recent Events</b></h1>
   <div >
     <div>
-    <a href="sports"><h2>Sports</h2></a>
+    <a href="sports_student"><h2>Sports</h2></a>
     <% for(item of sports){ %>
         <div class="container-recent">
         <h3><%= item.event_title %></h3>
         <p><%= item.event_description%></p>
         <span>Event At:<%= item.event_at .toString().split(" ").slice(0,4) %> </span>&nbsp;&nbsp;&nbsp;
         <span>Timings:<%= item.start_time %> to <%= item.end_time %></span>
+        <span><a href="/register/<%= item.event_title %>/sport"><button class="register">Register</button></a></span>
+        <span><a href="/register_volunteer/<%= item.event_title %>"><button class="register">Register as a volunteer</button></a></span>
         </div>
         <% } %>
         
     </div>
     <div>
-        <a href="seminars"><h2>Seminars</h2></a>
+        <a href="seminars_student"><h2>Seminars</h2></a>
         <% for(item of seminars){ %>
         <div class="container-recent">
         <h3><%= item.event_title %></h3>
-        <p><%= item.event_description%></p>
+        <p><%= item.event_description%></p>student
         <span>Event At:<%= item.event_at .toString().split(" ").slice(0,4) %> </span>&nbsp;&nbsp;&nbsp;
         <span>Timings:<%= item.start_time %> to <%= item.end_time %></span>
+        <span><a href="/register/<%= item.event_title %>/seminar"><button class="register">Register</button></a></span>
+        <span><a href="/register_volunteer/<%= item.event_title %>"><button class="register">Register as a volunteer</button></a></span>
         </div>
         <% } %>
         
     </div>
-        <a href="workshops"><h2>Workshops</h2></a>
+        <a href="workshops_student"><h2>Workshops</h2></a>
     <% for(item of workshops){ %>
         <div class="container-recent">
         <h3><%= item.event_title %></h3>
         <p><%= item.event_description%></p>
         <span>Event At:<%= item.event_at .toString().split(" ").slice(0,4) %> </span>&nbsp;&nbsp;&nbsp;
         <span>Timings:<%= item.start_time %> to <%= item.end_time %></span>
+        <span><a href="/register/<%= item.event_title %>/workshop"><button class="register">Register</button></a></span>
+        <span><a href="/register_volunteer/<%= item.event_title %>"><button class="register">Register as a volunteer</button></a></span>
         </div>
         <% } %>
         

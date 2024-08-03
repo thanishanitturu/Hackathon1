@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
-    <form method="post" action="/organiser/events">
+        <form method="post" action="/organiser/events/<%=profile%>">
         <label for="event_type">Event_type : </label>
         <input type="text" name="event_type" id="event_type" placeholder="type of event">
         <br><br>
@@ -32,6 +32,9 @@
         <br><br>
         <label for="duration">Duration :</label>
         <input type="text" name="duration" id="duration" placeholder="duration of event">
+        <br><br>
+        <label for="volunteer">Volunteers Required:</label>
+        <input type="text" name="volunteer" placeholder="volunteers_Required">
         <br><br>
         <button>Post Event</button>
     </form>

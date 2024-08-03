@@ -23,7 +23,8 @@
         <span>Timings:<%= workshop.start_time %> to <%= workshop.end_time %></span><br>
         <button class="btn btn-secondary"><a href="/workshops/<%= workshop._id %>/edit">Edit Event</a></button>
         <form method="post" action="/workshops/<%= workshop._id %>?_method=DELETE">
-            <button class="btn btn-secondary">Delete Event</button>
+            <button class="btn btn-secondary" type="submit">Delete Event</button>
+            
             </form>
         </div>
         <% } %>

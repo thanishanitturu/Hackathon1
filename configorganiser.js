@@ -23,6 +23,16 @@ const LoginSchema=new mongoose.Schema(
         {
             type:String,
             required:true,
+        },
+        img_name:
+        {
+            type:String,
+            required:true
+        },
+        image:
+        {
+            data:Buffer,
+            contentType:String
         }
     }
 );

@@ -11,7 +11,7 @@
         <div class="login-box">
             <img src="https://media.licdn.com/dms/image/C510BAQEBxglf5-knTQ/company-logo_200_200/0/1630586594017?e=2147483647&v=beta&t=ZCho3-hGCuRM1NRFoi55HsIfwDv6TGTZ-NekAYcO0Ik" width="70px" height="70px">
             <h2>Organiser SignUp</h2>
-            <form action="/organisersignup" method="post"> 
+            <form action="/organisersignup" method="post" enctype="multipart/form-data"> 
                 <div class="textbox">
                     <input type="text" placeholder="User Name" name="username" required>
                 </div>
@@ -20,6 +20,10 @@
                 </div>
                 <div class="textbox">
                     <input type="text" placeholder="email" name="email" required>
+                </div>
+                <div class="textbox">
+                    <input type="file" name="profileImage">
+
                 </div>
                 
                 <button type="submit" class="btn">SignUP</button>

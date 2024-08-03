@@ -50,31 +50,42 @@
         <div class="nav-text">
             <!-- <p>Login</p> -->
             <a href="login"><button class="btn btn-secondary">LOGIN</button></a>
-        </div>
+        </div class="profile">
+       
+        <% if (profile && profile.img_name) { %>
+    <a href="/image/<%= profile.img_name %>">
+        <img src="/image/<%= profile.img_name %>" width="100px" height="50px" style="border-radius: 50%">
+    </a>
+<% } else { %>
+    <p>No profile image available</p>
+<% } %>
         <a href="" class="nav-cart">
             <img src="https://shiksha-static-mediadata.s3.ap-southeast-1.amazonaws.com/mediadata/reviewDocument/images/1691140628480images(1).jpeg" width="200px" height="50" alt="" >
         </a>
 
     </nav>
     <div class="container">
-  <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
         <img src="/css/event.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" style="border-radius: 70%;">
-      </div>
-      <div class="col-lg-6">
+    </div>
+    <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Discover the power of event management</h1>
         <p class="lead">Unleashing Your Event Organising Powers</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-       <a href="newevent"> <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Post your event</button></a>
+        <a href="newevent/<%=profile.name%>"> <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Post your event</button></a>
         </div>
-      </div>
+        </div>
     </div>
-  </div>
-  <h1><b>Recent Events</b></h1>
-  <div >
+</div>
+<h1><b>Upcoming Events</b></h1>
+
+
+
+<div >
     <div>
-    <a href="sports"><h2>Sports</h2></a>
+    <a href="/sports"><h2>Sports</h2></a>
     <% for(item of sports){ %>
         <div class="container-recent">
         <h3><%= item.event_title %></h3>
@@ -86,29 +97,29 @@
         
     </div>
     <div>
-        <a href="seminars"><h2>Seminars</h2></a>
+        <a href="/seminars"><h2>Seminars</h2></a>
         <% for(item of seminars){ %>
         <div class="container-recent">
         <h3><%= item.event_title %></h3>
         <p><%= item.event_description%></p>
-        <span>Event At:<%= item.event_at .toString().split(" ").slice(0,4) %> </span>&nbsp;&nbsp;&nbsp;
+        <span>Event At:<%= item.event_at .toString().split(" ").slice(0,5) %> </span>&nbsp;&nbsp;&nbsp;
         <span>Timings:<%= item.start_time %> to <%= item.end_time %></span>
         </div>
         <% } %>
         
     </div>
-        <a href="workshops"><h2>Workshops</h2></a>
+        <a href="/workshops"><h2>Workshops</h2></a>
     <% for(item of workshops){ %>
         <div class="container-recent">
         <h3><%= item.event_title %></h3>
         <p><%= item.event_description%></p>
-        <span>Event At:<%= item.event_at .toString().split(" ").slice(0,4) %> </span>&nbsp;&nbsp;&nbsp;
+        <span>Event At:<%= item.event_at .toString().split(" ").slice(0,5) %> </span>&nbsp;&nbsp;&nbsp;
         <span>Timings:<%= item.start_time %> to <%= item.end_time %></span>
         </div>
         <% } %>
         
-  </div>
-  </div>
+</div>
+</div>
 
 </body>
 </html>
